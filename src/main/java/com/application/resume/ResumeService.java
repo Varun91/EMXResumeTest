@@ -12,7 +12,6 @@ import java.util.Set;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Request;
 import javax.ws.rs.core.Response;
@@ -38,7 +37,7 @@ public class ResumeService {
 		qaMap.put("Degree", "MS in Computer Engineering from Purdue University");
 		qaMap.put("Resume", "https://www.dropbox.com/sh/r0oxyc8m2ciao7s/AACwopAKh_tefiPfV2EtkrB-a?dl=0");
 		qaMap.put("Status", "Yes, Currently on H1B");
-		qaMap.put("Source", "TODO");
+		qaMap.put("Source", "https://github.com/Varun91/EMXResumeTest.git");
 		qaMap.put("Position", "Software Engineer");
 		return qaMap;
 	}
@@ -63,6 +62,7 @@ public class ResumeService {
 	 * Solves the Puzzle
 	 */
 	private String solvePuzzle(String query) {
+		System.out.println(query);
 		BufferedReader bufReader = new BufferedReader(new StringReader(query));
 		String line = null;
 		char[][] mat;
@@ -181,7 +181,6 @@ public class ResumeService {
 			}
 			s.append("\n");
 		}
-		System.out.print(s);
 		return s.toString();
 	}
 
